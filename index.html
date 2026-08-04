@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Военный билет в Екатеринбурге — Помощь призывникам</title>
+    <!-- Подключаем шрифт Montserrat -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap" rel="stylesheet">
+    <!-- Подключаем иконки FontAwesome -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="container_header__container">
+        <a href="#" class="logo">
+            <img src="img/logo.png" alt="БезПризыва">
+        </a>
+
+        <nav class="menu">
+            <ul class="menu__list">
+                <li><a href="#steps" class="menu__link">Этапы работы</a></li>
+                <li><a href="#tariffs" class="menu__link">Тарифы</a></li>
+                <li><a href="#advantages" class="menu__link">Преимущества</a></li>
+                <li><a href="#faq" class="menu__link">Ответы на вопросы</a></li>
+                <li><a href="#knowledge" class="menu__link">База знаний</a></li>
+                <li><a href="#team" class="menu__link">О нас</a></li>
+                <li><a href="#contacts" class="menu__link">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__contacts">
+            <div class="header__city">Екатеринбург</div>
+            <a href="tel:+79920927711" class="header__phone">+7 (992) 092-77-11</a>
+            <span class="header__sub">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</span>
+        </div>
+    </div>
+</header>
+    <!-- ГЛАВНЫЙ БАННЕР -->
+    <section class="hero">
+        <div class="container hero__container">
+            <!-- Левая колонка с текстом -->
+            <div class="hero__content">
+                <h1 class="hero__title">Юридическая помощь призывникам</h1>
+                <p class="hero__subtitle">Защищаем права и интересы призывников по Уралу с 2017 года</p>
+                
+                <div class="hero_features">
+                    <!-- 1. Бесплатная консультация -->
+                    <div class="feature-item">
+                        <div class="feature-item_icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://w3.org"><path d="M5 13L9 17L19 7" stroke="#38a169" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <span class="feature-item_text">Бесплатная консультация</span>
+                    </div>
+
+                    <!-- 2. Официальный договор -->
+                    <div class="feature-item">
+                        <div class="feature-item_icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://w3.org"><path d="M5 13L9 17L19 7" stroke="#38a169" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <span class="feature-item_text">Официальный договор</span>
+                    </div>
+
+                    <!-- 3. Комплексная поддержка -->
+                    <div class="feature-item">
+                        <div class="feature-item_icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://w3.org"><path d="M5 13L9 17L19 7" stroke="#38a169" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <span class="feature-item_text">Комплексная поддержка</span>
+                    </div>
+
+                    <!-- 4. Не поможем — вернем деньги -->
+                    <div class="feature-item">
+                        <div class="feature-item_icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://w3.org"><path d="M5 13L9 17L19 7" stroke="#38a169" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <span class="feature-item_text">Не поможем — вернем деньги</span>
+                    </div>
+                </div>
+
+                <div class="hero__actions">
+                    <a href="#" class="btn hero__btn">Записаться на консультацию</a>
+                    
+                    <div class="hero__socials">
+                        <a href="#" class="social-btn tg" title="Telegram"><span>ТГ</span></a>
+                        <a href="#" class="social-btn vk" title="VK"><span>VK</span></a>
+                        <a href="#" class="social-btn wa" title="WhatsApp"><span>WA</span></a>
+                        <a href="#" class="social-btn mx" title="Макс"><span>MX</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Правая колонка: Парень + Отзывы -->
+            <div class="hero__right-block">
+                <div class="hero__image">
+                    <img src="img/hero-man.png" alt="Призывник с военным билетом">
+                </div>
+                
+                        <div class="reviews-slider">
+                            <div class="reviews-wrapper">
+                                <div class="reviews-track">
+                                    <!-- 1. Исходный -->
+                                    <div class="review-card">
+                                        <div class="review-card_header">
+                                            <span class="review-card_name">Дмитрий В.</span>
+                                            <span class="review-card_stars">★★★★★</span>
+                                        </div>
+                                        <p class="review-card_text">Прошел независимое обследование, подтвердили диагноз. Юристы полностью вели дело.</p>
+                                    </div>
+                                    <!-- 2. Исходный -->
+                                    <div class="review-card">
+                                        <div class="review-card_header">
+                                            <span class="review-card_name">Марина Н.</span>
+                                            <span class="review-card_stars">★★★★★</span>
+                                        </div>
+                                        <p class="review-card_text">Большое спасибо юристам! Всегда были на связи. Сын зачислен в запас, мы очень довольны.</p>
+                                    </div>
+                                    <!-- 3. Исходный -->
+                                    <div class="review-card">
+                                        <div class="review-card_header">
+                                            <span class="review-card_name">Артем К.</span>
+                                            <span class="review-card_stars">★★★★★</span>
+                                        </div>
+                                        <p class="review-card_text">Получил военный билет по гипертонии за 2 призыва. Четкая и законная работа команды!</p>
+                                    </div>
+                                    <!-- 4 -->
+                                    <div class="review-card">
+                                        <div class="review-card_header">
+                                            <span class="review-card_name">Светлана И.</span>
+                                            <span class="review-card_stars">★★★★★</span>
+                                        </div>
+                                        <p class="review-card_text">Помогли оспорить решение районной комиссии. На городском сборном пункте утвердили категорию В.</p>
+                                    </div>
+                                    <!-- 5 -->
+                                    <div class="review-card">
+                                        <div class="review-card_header">
+                                            <span class="review-card_name">Илья П.</span>
+                                            <span class="review-card_stars">★★★★★</span>
+                                        </div>
+                                        <p class="review-card_text">Сопровождали на каждом этапе, составили все заявления в военкомат. Жалею, что не обратился раньше.</p>
+                                    </div>
+                                    <!-- 6 -->
+                                    <div class="review-card">
+                                        <div class="review-card_header">
+                                            <span class="review-card_name">Владислав М.</span>
+                                            <span class="review-card_stars">★★★★★</span>
+                                        </div>
+                                        <p class="review-card_text">Освободился от службы по плоскостопию 3 степени. Юристы заставили военкомат принять мои снимки.</p>
+                                    </div>
+                                    <!-- 7 -->
+                                    <div class="review-card">
+                                        <div class="review-card_header">
+                                            <span class="review-card_name">Елена Ю.</span>
+                                            <span class="review-card_stars">★★★★★</span>
+                                        </div>
+                                        <p class="review-card_text">Уберегли сына от незаконного призыва прямо во время учебы в колледже. Настоящие профессионалы.</p>
+                                    </div>
+                                    <!-- 8 -->
+                                    <div class="review-card">
+                                        <div class="review-card_header">
+                                            <span class="review-card_name">Максим С.</span>
+                                            <span class="review-card_stars">★★★★★</span>
+                                        </div>
+                                        <p class="review-card_text">Все честно и по договору. Если бы не помощь БезПризыва, ушел бы служить с язвой желудка.</p>
+                                    </div>
+                                    <!-- 9 -->
+                                    <div class="review-card">
+                                        <div class="review-card_header">
+                                            <span class="review-card_name">Никита Д.</span>
+                                            <span class="review-card_stars">★★★★★</span>
+                                        </div>
+                                        <p class="review-card_text">Прошли КМО без лишней нервотрепки. Повестку на получение военника уже выдали на руки.</p>
+                                    </div>
+                                    <!-- 10 -->
+                                    <div class="review-card">
+                                        <div class="review-card_header">
+                                            <span class="review-card_name">Ольга В.</span>
+                                            <span class="review-card_stars">★★★★★</span>
+                                        </div>
+                                        <p class="review-card_text">Грамотная допризывная подготовка документов. Защитили права сына быстро и без судов.</p>
+                                    </div>
+
+                                    <!-- ТЕХНИЧЕСКИЙ ДУБЛИКАТ ДЛЯ БЕСШОВНОСТИ ЛЕНТЫ -->
+                                    <div class="review-card"><div class="review-card_header"><span class="review-card_name">Дмитрий В.</span><span class="review-card_stars">★★★★★</span></div><p class="review-card_text">Прошел независимое обследование, подтвердили диагноз. Юристы полностью вели дело.</p></div>
+                                    <div class="review-card"><div class="review-card_header"><span class="review-card_name">Марина Н.</span><span class="review-card_stars">★★★★★</span></div><p class="review-card_text">Большое спасибо юристам! Всегда были на связи. Сын зачислен в запас, мы очень довольны.</p></div>
+                                    <div class="review-card"><div class="review-card_header"><span class="review-card_name">Артем К.</span><span class="review-card_stars">★★★★★</span></div><p class="review-card_text">Получил военный билет по гипертонии за 2 призыва. Четкая и законная работа команды!</p></div>
+                                    <div class="review-card"><div class="review-card_header"><span class="review-card_name">Светлана И.</span><span class="review-card_stars">★★★★★</span></div><p class="review-card_text">Помогли оспорить решение районной комиссии. На городском сборном пункте утвердили категорию В.</p></div>
+                                    <div class="review-card"><div class="review-card_header"><span class="review-card_name">Илья П.</span><span class="review-card_stars">★★★★★</span></div><p class="review-card_text">Сопровождали на каждом этапе, составили все заявления в военкомат. Жалею, что не обратился раньше.</p></div>
+                                </div>
+                            </div>
+                        </div>
+        </div>
+    </section>
+
+    <!-- МОДАЛЬНОЕ ОКНО С ФОРМОЙ ЗАЯВКИ -->
+    <div id="modal-callback" class="modal">
+        <div class="modal__content">
+            <button class="modal__close">&times;</button>
+            <h3 class="modal__title">Запись на консультацию</h3>
+            <p class="modal__subtitle">Оставьте ваши контакты, и наш юрист свяжется с вами в течение 15 минут</p>
+            
+            <form class="modal__form" action="mail.php" method="POST">
+                <div class="form-group">
+                    <label class="form-label">Ваше имя</label>
+                    <input type="text" name="user_name" class="form-input" placeholder="Иван Иванов" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Номер телефона</label>
+                    <input type="tel" name="user_phone" class="form-input" placeholder="+7 (999) 000-00-00" required>
+                </div>
+                <button type="submit" class="btn modal__btn">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подключаем скрипты -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- БЛОК: КАК МЫ ПОМОГАЕМ ПРИЗЫВНИКАМ -->
+<section class="steps-section" id="steps">
+    <div class="container">
+        <h2 class="section-title"><span>•</span> Как мы помогаем призывникам</h2>
+        <div class="steps-grid">
+            <!-- Этап 1 -->
+            <div class="step-card">
+                <div class="step-icon-box">
+                    <!-- Иконка: Консультация -->
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                </div>
+                <h3>Бесплатная консультация</h3>
+                <p>Бесплатный разбор вашей ситуации. Проанализируем документы и составим пошаговый план получения военного билета.</p>
+                <!-- Класс btn-trigger свяжет кнопку с модальным окном первого экрана -->
+                <button class="step-btn btn-trigger">Получить консультацию</button>
+            </div>
+
+            <!-- Этап 2 -->
+            <div class="step-card">
+                <div class="step-icon-box">
+                    <!-- Иконка: Анализ -->
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </div>
+                <h3>Анализ ситуации</h3>
+                <p>Разбираем каждый случай индивидуально. Эксперты по военному праву проведут полный анализ ваших медицинских документов и свяжут текущие жалобы на здоровье с актуальными статьями Расписания болезней.</p>
+            </div>
+
+            <!-- Этап 3 -->
+            <div class="step-card">
+                <div class="step-icon-box">
+                    <!-- Иконка: Диагноз -->
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <h3>Выявление и закрепление диагноза</h3>
+                <p>Обеспечиваем прохождение независимой диагностики и готовим доказательную базу. Мы контролируем, чтобы каждый документ был оформлен корректно, исключая любые поводы для отказа или игнорирования со стороны военного комиссариата.</p>
+            </div>
+
+            <!-- Этап 4 -->
+            <div class="step-card">
+                <div class="step-icon-box">
+                    <!-- Иконка: Стратегия -->
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+                <h3>Составление стратегии и сопровождение</h3>
+                <p>Разрабатываем индивидуальный план действий перед походом в военкомат. Готовим к медицинской комиссии и обеспечиваем полное юридическое сопровождение: мы контролируем каждый этап, чтобы ваши права не были нарушены.</p>
+            </div>
+
+            <!-- Этап 5 -->
+            <div class="step-card">
+                <div class="step-icon-box">
+                    <!-- Иконка: Результат -->
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34"></path><path d="M12 2a6.45 6.45 0 0 1 6 6.5c0 3.75-2.5 5.5-6 5.5s-6-1.75-6-5.5A6.45 6.45 0 0 1 12 2z"></path></svg>
+                </div>
+                <h3>Получение военного билета</h3>
+                <p>Сопровождаем на призывной комиссии до момента оглашения решения. Вы получаете военный билет на законных основаниях и закрываете вопрос с призывом раз и навсегда.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- БЛОК: НАШИ ТАРИФЫ -->
+<section class="tariffs-section" id="tariffs">
+    <div class="container">
+<h2 class="section-title"><span>•</span> Наши тарифы</h2>        
+        <div class="tariffs-grid">
+            <!-- Тариф 1 -->
+            <div class="tariff-card">
+                <div class="tariff-header">
+                    <h3>Юридическая консультация призывникам</h3>
+                    <p class="tariff-desc">Консультация юриста для призывников и их родителей по поводу военкомата, призыва на службу в армию и наличии оснований для освобождения от неё.</p>
+                </div>
+                
+                <div class="tariff-features">
+                    <div class="feature-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Длительность 40-60 минут</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>В офисе или дистанционно</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Анонимно и безопасно</span>
+                    </div>
+                </div>
+                
+                <div class="tariff-footer">
+                    <div class="price-tag">Бесплатно</div>
+                    <button class="tariff-btn tariff-trigger">Проконсультироваться</button>
+                </div>
+            </div>
+
+            <!-- Тариф 2 -->
+            <div class="tariff-card">
+                <div class="tariff-header">
+                    <h3>Помощь в получении военного билета законно*</h3>
+                    <p class="tariff-desc">Комплекс юридических услуг, целью которых является зачисление призывника в запас Вооруженных сил и получение военного билета на законных основаниях.</p>
+                </div>
+                
+                <div class="tariff-features">
+                    <div class="feature-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Фиксированная стоимость договора</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Срок договора: до зачисления в запас</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Рассрочка платежа до 24 месяцев</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Сопровождение на призывных комиссиях</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Стоимость услуг от 4200 руб/мес</span>
+                    </div>
+                </div>
+                
+                <div class="tariff-footer">
+                    <div class="price-tag">от 80 000 руб.</div>
+                    <button class="tariff-btn tariff-trigger">Проконсультироваться</button>
+                </div>
+            </div>
+
+            <!-- Тариф 3 -->
+            <div class="tariff-card">
+                <div class="tariff-header">
+                    <h3>Помощь в получении отсрочки от армии*</h3>
+                    <p class="tariff-desc">Юридические услуги, направленные на защиту прав призывников, имеющих основания для получения отсрочки от армии.</p>
+                </div>
+                
+                <div class="tariff-features">
+                    <div class="feature-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Консультации юриста</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Защита от силовой призыва</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Возврат средств в случае неудачи</span>
+                    </div>
+                    <div class="feature-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Срок договора: 1 или 2 призыва</span>
+                    </div>
+                </div>
+                
+                <div class="tariff-footer">
+                    <div class="price-tag">от 50 000 руб.</div>
+                    <button class="tariff-btn tariff-trigger">Проконсультироваться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- БЛОК: ПРЕИМУЩЕСТВА -->
+<section class="advantages-section" id="advantages">
+    <div class="container">
+        <div class="advantages-badge">● Преимущества</div>
+        
+        <div class="advantages-grid">
+            <!-- Преимущество 1 -->
+            <div class="adv-card">
+                <div class="adv-icon-box">
+                    <!-- Иконка: Законность (Молоток судьи) -->
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5L3 6V3h3l11.5 11.5z"></path><path d="M13 19l6-6"></path><path d="M16 22l5-5"></path><path d="M19 11l3-3-3-3-3 3z"></path></svg>
+                </div>
+                <h3>Законность</h3>
+                <p>Работаем строго в рамках ФЗ-53. Используем только законные медицинские и юридические основания.</p>
+            </div>
+
+            <!-- Преимущество 2 -->
+            <div class="adv-card">
+                <div class="adv-icon-box">
+                    <!-- Иконка: Экспертность (Магистрская шляпа) -->
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+                </div>
+                <h3>Экспертность</h3>
+                <p>Фокусируемся только на военном праве. Знаем все внутренние регламенты военкоматов и тонкости законодательства, что гарантирует результат.</p>
+            </div>
+
+            <!-- Преимущество 3 -->
+            <div class="adv-card">
+                <div class="adv-icon-box">
+                    <!-- Иконка: Поддержка (Рукопожатие) -->
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7.5" r="4"></circle><path d="M20 8v6M23 11h-6"></path></svg>
+                </div>
+                <h3>Поддержка</h3>
+                <p>Готовим к каждому визиту в военкомат и контролируем процесс до получения результата.</p>
+            </div>
+
+            <!-- Преимущество 4 -->
+            <div class="adv-card">
+                <div class="adv-icon-box">
+                    <!-- Иконка: Безопасность (Договор/Защита) -->
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <h3>Безопасность</h3>
+                <p>Все этапы работы, сроки и обязательства прописываются в договоре. Вы точно знаете, за что платите и какой результат получите.</p>
+            </div>
+
+            <!-- Преимущество 5 -->
+            <div class="adv-card">
+                <div class="adv-icon-box">
+                    <!-- Иконка: Диагностика (Больница/Здание) -->
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="6"></line><line x1="6" y1="6" x2="18" y2="6"></line><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+                </div>
+                <h3>Диагностика</h3>
+                <p>Направляем в государственные и областные больницы. Результаты таких учреждений признаются военкоматом, что исключает их игнорирование.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- БЛОК: ОТВЕТЫ НА ВОПРОСЫ -->
+<section class="faq-section" id="faq">
+    <div class="container">
+<h2 class="section-title"><span>•</span> Ответы на вопросы</h2>        
+        <div class="faq-list">
+            <!-- Вопрос 1 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Можно ли получить военный билет без службы?</span>
+                    <div class="faq-toggle-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Да, исключительно законным путем. Закон РФ предусматривает освобождение от призыва по состоянию здоровья (статья 23 ФЗ-53). Мы помогаем тщательно обследовать организм, найти непризывное заболевание и зафиксировать его для призывной комиссии.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Какие болезни дают освобождение от армии?</span>
+                    <div class="faq-toggle-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Полный перечень содержится в документе «Расписание болезней». Туда входят более 2000 патологий: от плоскостопия и сколиоза определенных степеней до гипертонии, гастрита, кожных заболеваний (экзема, псориаз) и проблем со зрением.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Что делать, если уже пришла повестка?</span>
+                    <div class="faq-toggle-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Главное — не паниковать и не идти в военкомат без подготовки. Свяжитесь с нами для экспресс-анализа вашей ситуации. Мы поможем собрать пакет медицинских документов или обжаловать повестку, если она вручена с нарушениями.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Сколько времени занимает получение военного билета?</span>
+                    <div class="faq-toggle-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>В среднем процесс занимает от 1 до 2 призывов. Сроки зависят от текущего состояния вашего здоровья, скорости прохождения независимых медицинских обследований и работы самой призывной комиссии.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Работаете ли вы официально по договору?</span>
+                    <div class="faq-toggle-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Да, перед началом работы мы заключаем официальный двухсторонний договор юридических услуг. В нем четко фиксируются все наши обязательства, этапы ведения вашего дела, условия рассрочки и гарантии.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Можно ли получить консультацию перед началом работы?</span>
+                    <div class="faq-toggle-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Конечно. Первая вводная консультация проводится полностью бесплатно. Юрист разберет вашу текущую ситуацию с учебой или работой, изучит имеющиеся жалобы на здоровье и предложит первичный план действий.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- БЛОК: БАЗА ЗНАНИЙ (SEO БЛОК) -->
+<section class="knowledge-section" id="knowledge">
+    <div class="container">
+<h2 class="section-title"><span>•</span> База знаний</h2>        
+        <div class="knowledge-list">
+            <!-- Вопрос 1 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Что делать, если появилась повестка в Едином реестре повесток?</span>
+                    <div class="faq-toggle-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Электронная повестка считается врученной с момента размещения в личном кабинете Реестра. С этого дня начинает действовать запрет на выезд из РФ. Неявка в течение 20 дней повлечет ограничения: запрет на управление авто, регистрацию ИП и сделки с недвижимостью. Если у вас есть основания для отсрочки, их нужно срочно приобщить к делу через Госуслуги или лично с юристом.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Какие болезни дают освобождение от армии?</span>
+                    <div class="faq-toggle-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Освобождение (категория «В» или «Д») дают хронические и серьезные заболевания, зафиксированные в Расписании болезней. Наиболее частые: гипертония от 1-й стадии, плоскостопие 3-й степени (угол от 156 градусов), сколиоз от 17 градусов с нарушением функций, язва желудка, умеренная астма, выраженный нейродермит и тяжелое зрение (миопия более 6 диоптрий).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Какие категории годности бывают в армии?</span>
+                    <div class="faq-toggle-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Всего существует 5 категорий: «А» — годен без ограничений, «Б» — годен с незначительными ограничениями (годен в определенные рода войск), «В» — ограниченно годен (освобождение от призыва в мирное время, зачисление в запас), «Г» — временно не годен (отсрочка по здоровью от 6 до 12 месяцев), «Д» — не годен (полное снятие с воинского учета).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Как проходит медицинская комиссия в военкомате?</span>
+                    <div class="faq-toggle-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Призывник обязан пройти 7 профильных врачей: терапевта, хирурга, невролога, психиатра, окулиста, оториноларинголога и стоматолога. Врачи военкомата не ставят диагнозы, а лишь сверяют предоставленные вами медицинские документы с Расписанием болезней. Именно поэтому критически важно подготовить заверенные выписки и истории болезней до визита на комиссию.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Можно ли обжаловать решение призывной комиссии?</span>
+                    <div class="faq-toggle-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="18" y2="12"></line></svg>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Да, решение районной комиссии может быть обжаловано в вышестоящую призывную комиссию субъекта РФ (КМО) или в судебном порядке. Подача жалобы в суд или на КМО временно приостанавливает выполнение решения о призыве, что защищает гражданина от незаконной и быстрой отправки в войска до вынесения окончательного вердикта.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Что делать родителям призывника?</span>
+                    <div class="faq-toggle-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Родителям рекомендуется оформить нотариальную доверенность на представление интересов сына. Это позволит представлять его интересы в военкоматах, медицинских учреждениях и судах, подавать заявления, запрашивать выписки и защищать права призывника, даже если он удерживается внутри здания сборного пункта.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- БЛОК: НАША КОМАНДА -->
+<section class="team-section" id="team">
+    <div class="container">
+<h2 class="section-title"><span>•</span> Наша команда</h2>        
+        <div class="team-grid">
+            <!-- Сотрудник 1 -->
+            <div class="team-card">
+                <div class="team-img-wrapper">
+                    <img src="img/team-alexandr.png" alt="Владимиров Александр Владимирович">
+                </div>
+                <h3>Владимиров Александр<br>Владимирович</h3>
+                <div class="team-position">Консультант</div>
+                <p>Анализирует документы и анамнез по «Расписанию болезней». Проводит экспертную оценку состояния здоровья и перспектив получения нужной категории.</p>
+            </div>
+
+            <!-- Сотрудник 2 -->
+            <div class="team-card">
+                <div class="team-img-wrapper">
+                    <img src="img/team-elizaveta.png" alt="Демидова Елизавета Андреевна">
+                </div>
+                <h3>Демидова Елизавета<br>Андреевна</h3>
+                <div class="team-position">Врач-консультант</div>
+                <p>Оценивает медицинские выписки на соответствие критериям. Готовит доказательную базу и обоснования для законного решения всех вопросов призыва.</p>
+            </div>
+
+            <!-- Сотрудник 3 -->
+            <div class="team-card">
+                <div class="team-img-wrapper">
+                    <img src="img/team-natalia.png" alt="Тарасова Наталья Юрьевна">
+                </div>
+                <h3>Тарасова Наталья<br>Юрьевна</h3>
+                <div class="team-position">Юрист</div>
+                <p>Обеспечивает юридическое сопровождение в госорганах. Готовит жалобы и иски, защищая интересы призывника в военкоматах и судебных инстанциях.</p>
+            </div>
+
+            <!-- Сотрудник 4 -->
+            <div class="team-card">
+                <div class="team-img-wrapper">
+                    <img src="img/team-vladimir.png" alt="Мамонов Владимир Алексеевич">
+                </div>
+                <h3>Мамонов Владимир<br>Алексеевич</h3>
+                <div class="team-position">Помощник юриста</div>
+                <p>Сопровождает документооборот и административные процессы. Гарантирует точность подачи всех справок и их сохранность на каждом этапе вашей работы.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- БЛОК КОНТАКТЫ И КАРТА -->
+    <section class="footer-section" id="contacts">
+        <div class="footer-container">
+            
+            <!-- Левая колонка: Компактная карточка -->
+            <div class="contacts-card">
+                <h2 class="section-title"><span>•</span> Контакты</h2>
+                
+                <div class="contacts-card-content">
+                    <div class="contacts-line">
+                        <span class="contacts-bold">г. Екатеринбург</span>
+                        <span class="contacts-gray">ул. 8 Марта, 12А, офис 223</span>
+                    </div>
+                    
+                    <div class="contacts-line">
+                        <a href="tel:+79920927711" class="contacts-link">+7 (992) 092-77-11</a>
+                        <a href="tel:+79920071447" class="contacts-link">+7 (992) 007-14-47</a>
+                    </div>
+                    
+                                <a href="#modal-callback" class="contacts-phone-btn" style="text-decoration: none; display: flex; align-items: center; justify-content: center; text-align: center;">Обратиться к нам</a>
+                    
+                    <!-- Ряд иконок соцсетей -->
+                    <div class="contacts-social-row">
+                        <a href="https://t.me" target="_blank" class="soc-icon tg">TG</a>
+                        <a href="https://vk.com" target="_blank" class="soc-icon vk">VK</a>
+                        <a href="#" class="soc-icon mx">M</a>
+                    </div>
+                </div>
+            </div>
+
+                    <!-- Правая колонка: Карта филиалов картинкой -->
+                    <div class="map-block">
+                        <div class="map-header" style="margin-bottom: 15px;">
+                            <h2 class="map-title" style="margin: 0 0 5px 0;">Филиалы компании</h2>
+                            <p class="map-desc" style="margin: 0; font-size: 14px; color: #4a5568; max-width: 100%;">Нашими клиентами уже стали более 1 500 призывников в 30 регионах России.</p>
+                        </div>
+                        
+                        <!-- Бокс с картинкой карты -->
+                        <div class="map-display" id="live-map" style="width: 100%; min-height: 380px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                            <img src="img/map-russia.png" alt="Карта филиалов БезПризыва Team" style="width: 100%; height: auto; max-height: 360px; object-fit: contain;">
+                        </div>
+                    </div>
+    </section>
+
+        <!-- ==================== СЕО-БЛОК: ИНТЕРАКТИВНАЯ КАРТА ПРОЕЗДА В ОФИС ==================== -->
+    <section class="office-map-section">
+        <div class="office-map-container">
+            <!-- Официальный и стабильный iframe карты Яндекса с точной меткой ул. 8 Марта, 12А -->
+            <iframe src="https://yandex.ru" width="100%" height="450" frameborder="0" allowfullscreen="true" style="position:relative; display:block; border:0;"></iframe>
+        </div>
+    </section>
+
+<!-- ФИНАЛЬНЫЙ ПОДВАЛ (FOOTER) -->
+<footer class="site-footer">
+    <div class="container">
+        <!-- Блок реквизитов -->
+        <div class="footer-requisites">
+            <p>Тел: <a href="tel:+79920927711">+7 (992) 092-77-11</a> | <a href="tel:+79920071447">+7 (992) 007-14-47</a></p>
+            <p>г. Екатеринбург, ул. 8 Марта, д. 12А, офис 223</p>
+            <p class="owner-name">ИП ВЛАДИМИРОВ А. В.</p>
+            <p>ИНН 773213236105</p>
+            <p>ОГРН 326965800010363</p>
+        </div>
+
+        <!-- Юридические дисклеймеры -->
+        <div class="footer-disclaimers">
+            <p><strong>*Важно!</strong> Решение об освобождении, призыве на военную службу или предоставлении отсрочки от исполнения воинской обязанности принимается исключительно призывной комиссией. Ни одна другая организация не обладает такими полномочиями.</p>
+            
+            <p>Законом «О воинской обязанности и военной службе» воинская обязанность предусматривает воинский учет, прохождение военной службы по призыву граждан мужского пола от 18 до 30 лет, не освобожденных от исполнения воинской обязанности и подлежащих призыву на военную службу по состоянию здоровья, и не имеющих освобождения или законной отсрочки от военной службы по призыву, основания для которых предусмотрены статьями 23 и 24 Закона о воинской обязанности. Согласно статье 8 Закона о воинской обязанности исключительными полномочиями по выдаче военных билетов обладает военный комиссариат района (города).</p>
+            
+            <p>Сайт и наша компания не пропагандируют уклонение от военной службы и совершение действий, запрещенных действующим законодательством, так как это является нарушением ст. 21.5 КоАП РФ, а также ч.1 ст. 328 УК РФ. Все публикации и материалы, размещенные на сайте, носят исключительно информационный характер и не являются публичной офертой.</p>
+            
+            <p>Компания занимается консультацией призывников в сфере военного права согласно действующему законодательству, не навязывает свои услуги и не дает гарантий, что у клиента выявят основание, позволяющее освободиться от службы в соответствии с Расписанием болезней.</p>
+            
+            <p>Мы признаем, что защита Отечества является долгом и обязанностью гражданина РФ согласно ст. 59 Конституции РФ.</p>
+            
+            <p>При использовании слова «законно» мы ссылаемся на ст. 23 ФЗ от 28.03.1998 N 53-ФЗ «О воинской обязанности и военной службе», в которой описаны условия для освобождения граждан от призыва на военную службу.</p>
+            
+            <p>Информация, размещенная на сайте, не направлена на содействие лицам, подлежащим призыву на воинскую службу, в уклонении (избежании) (отрицании обязательности призыва) от воинского призыва, путем введения их в заблуждение о наличии такой возможности, в отсутствие оснований, установленных ч. 5 ст. 1, ст. 23, 24 Закона о воинской обязанности и военной службе.</p>
+            
+            <p>* условное название комплекса консультационных услуг, включающих разъяснение норм законодательства, подготовку документов и сопровождение на всех этапах взаимодействия с уполномоченными государственными органами. Мы не оформляем и не выдаем военные билеты или отсрочки от армии.</p>
+            
+            <p>** при выявлении непризывного диагноза или других оснований, предусмотренных законодательством.</p>
+        </div>
+    </div>
+</footer>
+
