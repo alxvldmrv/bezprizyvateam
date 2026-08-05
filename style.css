@@ -1441,3 +1441,197 @@ body {
     border-radius: 16px; /* Красивые современные скругленные углы */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); /* Легкая воздушная тень */
 }
+
+/* ==========================================================================
+   ИДЕАЛЬНАЯ МОБИЛЬНАЯ ВЕРСИЯ ДЛЯ САЙТА БЕЗПРИЗЫВА (До 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    
+    /* Отсекаем боковой скролл у всего сайта */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100%;
+    }
+    
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 1. АДАПТИВ ШАПКИ (HEADER) */
+    header {
+        padding: 12px 0 !important;
+        background: #ffffff !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;
+    }
+
+    .header__container {
+        display: flex !important;
+        flex-direction: column !important; /* Выстраиваем элементы вертикально */
+        align-items: center !important;
+        gap: 14px !important;
+        width: 100% !important;
+        padding: 0 16px !important;
+    }
+
+    /* Логотип по центру */
+    .logo {
+        display: block !important;
+        margin: 0 auto !important;
+    }
+    .logo img {
+        height: 35px !important; /* Немного уменьшаем размер для мобильных */
+        width: auto !important;
+    }
+
+    /* Навигация: превращаем в аккуратную горизонтальную ленту со скроллом */
+    .menu {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: auto !important; /* Включаем прокрутку пальцем влево-вправо */
+        -webkit-overflow-scrolling: touch !important;
+        padding-bottom: 4px !important;
+    }
+    
+    /* Прячем некрасивый системный ползунок прокрутки */
+    .menu::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+
+    .menu__list {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important; /* Запрещаем перенос ссылок на новую строку */
+        gap: 18px !important;
+        padding: 0 10px !important;
+        margin: 0 !important;
+        list-style: none !important;
+    }
+
+    .menu__link {
+        font-size: 14px !important;
+        white-space: nowrap !important; /* Фиксируем текст в одну строчку */
+        color: #4a4a4a !important;
+        text-decoration: none !important;
+        padding: 4px 0 !important;
+    }
+
+    /* Блок контактов: город и телефон */
+    .header__contacts {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        gap: 4px !important;
+    }
+
+    .header__city {
+        font-size: 12px !important;
+        color: #888888 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.05em !important;
+    }
+
+    /* Делаем телефон большим, чтобы по нему было легко попасть пальцем */
+    .header__phone {
+        font-size: 18px !important;
+        font-weight: 700 !important;
+        color: #4a4a4a !important;
+        text-decoration: none !important;
+        display: inline-block !important;
+        padding: 6px 12px !important;
+    }
+
+    /* 2. АДАПТИВ ГЛАВНОГО БАННЕРА (HERO) */
+    .hero__container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+        gap: 20px !important;
+    }
+    .hero__content {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        order: 1 !important;
+    }
+    .hero__title {
+        font-size: 26px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 12px !important;
+    }
+    .hero__subtitle {
+        font-size: 15px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 20px !important;
+    }
+    .hero__features {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 10px !important;
+    }
+    .feature-item {
+        width: 100% !important;
+        justify-content: flex-start !important;
+        padding: 10px 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Выравниваем и возвращаем парня с военником */
+    .hero__image, 
+    .hero__img-block,
+    img[src*="hero-man"] {
+        display: block !important;
+        order: 2 !important; /* Встает ровно под текст и галочки */
+        width: 100% !important;
+        max-width: 280px !important;
+        height: auto !important;
+        margin: 15px auto !important;
+    }
+
+    /* Любые кнопки действий на первом экране */
+    .hero__content button, 
+    .hero__content .btn,
+    .cta-block {
+        order: 3 !important;
+        width: 100% !important;
+    }
+
+    /* 3. КАРУСЕЛЬ ТАРИФОВ (ГОРИЗОНТАЛЬНЫЙ СВАЙП) */
+    .tariffs-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important; /* Включаем прокрутку пальцем */
+        -webkit-overflow-scrolling: touch;
+        gap: 16px !important;
+        padding: 10px 16px 20px 16px !important;
+        margin-left: -16px !important;
+        margin-right: -16px !important;
+    }
+    .tariffs-grid::-webkit-scrollbar {
+        display: none; /* Прячем системный ползунок */
+    }
+    
+    .tariff-card {
+        flex: 0 0 82% !important; /* Карточка занимает 82% ширины */
+        max-width: 290px !important;
+        min-width: 260px !important;
+        box-sizing: border-box !important;
+    }
+    
+    .tariff-btn {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
