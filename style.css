@@ -1673,3 +1673,861 @@ body {
         height: 100% !important;
     }
 }
+/* =========================================================
+   МОБИЛЬНАЯ АДАПТАЦИЯ САЙТА «ЮРИДИЧЕСКАЯ ПОМОЩЬ ПРИЗЫВНИКАМ»
+   Остальные стили сайта не удалять и не заменять.
+   ========================================================= */
+
+/* ---------- ОБЩИЕ НАСТРОЙКИ ---------- */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+img,
+iframe,
+video {
+    max-width: 100%;
+}
+
+.container,
+.steps-section .container,
+.tariffs-section .container,
+.advantages-section .container,
+.faq-section .container,
+.knowledge-section .container,
+.team-section .container,
+.site-footer .container,
+.office-map-container {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ---------- ПЛАНШЕТЫ: ДО 1024 PX ---------- */
+
+@media screen and (max-width: 1024px) {
+
+    .container,
+    .steps-section .container,
+    .tariffs-section .container,
+    .advantages-section .container,
+    .faq-section .container,
+    .knowledge-section .container,
+    .team-section .container,
+    .site-footer .container,
+    .office-map-container {
+        max-width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    /* Главный экран */
+
+    .hero__container {
+        gap: 28px;
+    }
+
+    .hero__content {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .hero__title {
+        font-size: clamp(32px, 4vw, 44px);
+        overflow-wrap: break-word;
+    }
+
+    .hero__right-block {
+        width: 44%;
+        min-width: 0;
+    }
+
+    .hero__image img {
+        width: 100%;
+        height: auto;
+        transform: none;
+    }
+
+    .hero_features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Сетки карточек */
+
+    .steps-grid,
+    .tariffs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .advantages-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .step-card,
+    .tariff-card,
+    .adv-card,
+    .team-card {
+        min-width: 0;
+        height: auto;
+    }
+
+    /* Контакты */
+
+    .footer-container {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .contacts-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .map-block {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+/* ---------- ТЕЛЕФОНЫ И ПЛАНШЕТЫ: ДО 768 PX ---------- */
+
+@media screen and (max-width: 768px) {
+
+    /* Общая ширина и отступы */
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: clip !important;
+    }
+
+    .container,
+    .steps-section .container,
+    .tariffs-section .container,
+    .advantages-section .container,
+    .faq-section .container,
+    .knowledge-section .container,
+    .team-section .container,
+    .site-footer .container,
+    .office-map-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* ---------- ШАПКА ---------- */
+
+    header,
+    .header {
+        position: sticky !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 64px;
+        padding: 8px 0 !important;
+        z-index: 1000 !important;
+        background-color: rgba(255, 255, 255, 0.96) !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
+    .container_header__container,
+    .header__container {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100% !important;
+        height: auto !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .logo {
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .logo img,
+    .logo__img {
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        object-fit: contain !important;
+    }
+
+    .header__contacts {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+        justify-content: center !important;
+        max-width: calc(100% - 60px);
+        height: auto !important;
+        text-align: right !important;
+    }
+
+    .header__city {
+        font-size: 10px !important;
+        margin-bottom: 3px !important;
+    }
+
+    .header__phone {
+        font-size: clamp(13px, 3.8vw, 16px) !important;
+        line-height: 1.3 !important;
+        white-space: nowrap;
+    }
+
+    .header__sub {
+        font-size: 9px !important;
+        line-height: 1.3 !important;
+    }
+
+    /*
+      Меню не прячем насильно: без соответствующей HTML-кнопки
+      и JavaScript скрытое меню невозможно нормально открыть.
+    */
+
+    .menu {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        height: auto !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .menu__list {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        gap: 18px !important;
+        width: max-content;
+        min-width: 100%;
+        padding: 8px 0 !important;
+        margin: 0 !important;
+    }
+
+    .menu__link {
+        display: inline-block;
+        font-size: 12px !important;
+        line-height: 1.4;
+        white-space: nowrap !important;
+    }
+
+    /* ---------- ГЛАВНЫЙ ЭКРАН ---------- */
+
+    .hero {
+        width: 100%;
+        padding: 36px 0 32px !important;
+        margin: 0 !important;
+        background-color: #f9f9f9;
+    }
+
+    .hero__container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+        gap: 24px !important;
+        width: 100% !important;
+    }
+
+    .hero__content {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        text-align: left !important;
+    }
+
+    .hero__title {
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(29px, 7vw, 40px) !important;
+        line-height: 1.15 !important;
+        letter-spacing: -0.7px !important;
+        margin: 0 0 18px !important;
+        overflow-wrap: anywhere;
+    }
+
+    .hero__subtitle {
+        font-size: 15px !important;
+        line-height: 1.65 !important;
+        margin-bottom: 22px !important;
+    }
+
+    .hero_features {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 24px !important;
+    }
+
+    .feature-item {
+        min-width: 0;
+        padding: 12px 14px !important;
+        gap: 10px !important;
+    }
+
+    .feature-item__text {
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+    }
+
+    .hero__actions {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+        width: 100%;
+    }
+
+    .btn {
+        max-width: 100%;
+        padding: 15px 20px !important;
+        font-size: 14px !important;
+        line-height: 1.4;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .hero__actions > .btn {
+        flex: 1 1 100%;
+    }
+
+    .hero__socials {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: flex-start;
+        gap: 10px !important;
+        width: 100%;
+    }
+
+    .social-btn {
+        min-width: 48px;
+        min-height: 44px;
+        width: auto !important;
+        padding: 0 14px;
+        flex: 0 0 auto;
+    }
+
+    .hero__right-block {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        overflow: hidden;
+    }
+
+    .hero__image {
+        width: 100% !important;
+        max-width: 100% !important;
+        background: transparent !important;
+        overflow: hidden;
+    }
+
+    .hero__image img,
+    .hero img,
+    img[src*="hero-man"] {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        object-fit: contain;
+        clip-path: none;
+        transform: none !important;
+    }
+
+    /* ---------- КАРУСЕЛЬ ОТЗЫВОВ ---------- */
+
+    .reviews-slider {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        padding: 18px !important;
+        margin-top: 0 !important;
+        border-radius: 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    .reviews-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .reviews-track {
+        display: flex !important;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .review-card {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+    }
+
+    .review-card__header {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .review-card_name {
+        font-size: 13px !important;
+    }
+
+    .review-card_stars {
+        font-size: 13px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .review-card__text {
+        font-size: 13px !important;
+        line-height: 1.65 !important;
+    }
+
+    /* ---------- ЭТАПЫ РАБОТЫ ---------- */
+
+    .steps-section,
+    .tariffs-section,
+    .advantages-section,
+    .faq-section,
+    .knowledge-section,
+    .team-section {
+        padding: 56px 0 !important;
+    }
+
+    .steps-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 18px !important;
+    }
+
+    .step-card {
+        width: 100%;
+        min-width: 0;
+        min-height: auto !important;
+        padding: 28px 20px !important;
+    }
+
+    .step-card h3 {
+        min-height: auto !important;
+        font-size: 17px !important;
+        line-height: 1.45 !important;
+    }
+
+    .step-card p {
+        font-size: 14px !important;
+        line-height: 1.7 !important;
+    }
+
+    /* ---------- ТАРИФЫ ---------- */
+
+    .tariffs-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 20px !important;
+        max-width: 100% !important;
+    }
+
+    .tariffs-title,
+    .faq-title,
+    .knowledge-title {
+        font-size: clamp(23px, 6vw, 30px) !important;
+        line-height: 1.25 !important;
+        margin-bottom: 32px !important;
+        overflow-wrap: anywhere;
+    }
+
+    .tariff-card {
+        width: 100%;
+        min-width: 0;
+        padding: 28px 20px !important;
+    }
+
+    .tariff-header h3 {
+        min-height: auto !important;
+        font-size: 17px !important;
+        line-height: 1.45 !important;
+    }
+
+    .tariff-desc {
+        min-height: auto !important;
+        font-size: 13px !important;
+        line-height: 1.65 !important;
+    }
+
+    .tariff-features {
+        gap: 10px !important;
+        margin-bottom: 28px !important;
+    }
+
+    .tariff-features .feature-item {
+        border-radius: 14px !important;
+        padding: 12px 14px !important;
+    }
+
+    .tariff-btn {
+        width: 100% !important;
+        padding: 15px 18px !important;
+        white-space: normal !important;
+    }
+
+    /* ---------- ПРЕИМУЩЕСТВА ---------- */
+
+    .advantages-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 16px !important;
+    }
+
+    .adv-card {
+        min-height: auto !important;
+        padding: 28px 20px !important;
+    }
+
+    .adv-card h3 {
+        min-height: auto !important;
+        font-size: 16px !important;
+        line-height: 1.45 !important;
+    }
+
+    .adv-card p {
+        font-size: 14px !important;
+        line-height: 1.65 !important;
+    }
+
+    /* ---------- ВОПРОСЫ И БАЗА ЗНАНИЙ ---------- */
+
+    .faq-list,
+    .knowledge-list {
+        gap: 12px !important;
+    }
+
+    .faq-question {
+        padding: 18px 16px !important;
+        gap: 12px !important;
+    }
+
+    .faq-question span {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
+
+    .faq-toggle-icon {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    .faq-answer-content {
+        padding: 0 16px 18px !important;
+    }
+
+    .faq-answer p {
+        font-size: 14px !important;
+        line-height: 1.7 !important;
+    }
+
+    /* ---------- КОМАНДА ---------- */
+
+    .team-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 20px !important;
+    }
+
+    .team-card {
+        width: 100%;
+        min-width: 0;
+        padding: 20px !important;
+    }
+
+    .team-img-wrapper {
+        height: auto !important;
+        aspect-ratio: 4 / 3;
+        margin-bottom: 18px !important;
+    }
+
+    .team-img-wrapper img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .team-card h3 {
+        min-height: auto !important;
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+    }
+
+    .team-card p {
+        font-size: 13px !important;
+        line-height: 1.7 !important;
+    }
+
+    /* ---------- КОНТАКТЫ И КАРТА ---------- */
+
+    .footer-section {
+        padding: 44px 0 !important;
+    }
+
+    .footer-container,
+    .footer-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 20px !important;
+        width: 100% !important;
+    }
+
+    .contacts-card,
+    .contacts-block {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        padding: 24px 18px !important;
+        box-sizing: border-box !important;
+    }
+
+    .contacts-card-content {
+        gap: 18px !important;
+    }
+
+    .contacts-line {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .contacts-link,
+    .contacts-bold {
+        overflow-wrap: anywhere;
+    }
+
+    .map-block {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .map-display {
+        width: 100% !important;
+        min-height: 280px !important;
+        height: 320px !important;
+    }
+
+    .office-map-section {
+        padding: 20px 0 40px !important;
+    }
+
+    .office-map-container iframe {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 280px;
+    }
+
+    /* ---------- ПОДВАЛ ---------- */
+
+    .site-footer {
+        padding: 36px 0 44px !important;
+    }
+
+    .footer-requisites {
+        margin-bottom: 30px !important;
+    }
+
+    .footer-requisites p {
+        font-size: 12px !important;
+        line-height: 1.7 !important;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-disclaimers {
+        gap: 14px !important;
+    }
+
+    .footer-disclaimers p {
+        font-size: 11px !important;
+        line-height: 1.65 !important;
+        text-align: left !important;
+        overflow-wrap: anywhere;
+    }
+
+    /* ---------- МОДАЛЬНОЕ ОКНО ---------- */
+
+    .modal {
+        padding: 16px !important;
+        box-sizing: border-box !important;
+    }
+
+    .modal__content {
+        width: 100% !important;
+        max-width: 440px !important;
+        max-height: calc(100vh - 32px) !important;
+        max-height: calc(100dvh - 32px) !important;
+        overflow-y: auto !important;
+        padding: 30px 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    .modal__title {
+        font-size: 21px !important;
+        line-height: 1.35 !important;
+    }
+
+    .form-input {
+        width: 100% !important;
+        min-width: 0 !important;
+        font-size: 16px !important;
+        box-sizing: border-box !important;
+    }
+
+    .modal__btn {
+        width: 100% !important;
+    }
+
+    /* Не даём длинным словам растягивать страницу */
+
+    h1, h2, h3, p, a, span, li {
+        overflow-wrap: break-word;
+    }
+}
+
+/* ---------- МАЛЕНЬКИЕ ТЕЛЕФОНЫ: ДО 480 PX ---------- */
+
+@media screen and (max-width: 480px) {
+
+    .container,
+    .steps-section .container,
+    .tariffs-section .container,
+    .advantages-section .container,
+    .faq-section .container,
+    .knowledge-section .container,
+    .team-section .container,
+    .site-footer .container,
+    .office-map-container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .hero {
+        padding-top: 28px !important;
+        padding-bottom: 28px !important;
+    }
+
+    .hero__title {
+        font-size: clamp(27px, 7.5vw, 34px) !important;
+        letter-spacing: -0.5px !important;
+    }
+
+    .hero__subtitle {
+        font-size: 14px !important;
+    }
+
+    .hero__actions {
+        gap: 10px !important;
+    }
+
+    .hero__actions > .btn {
+        width: 100% !important;
+        flex-basis: 100% !important;
+    }
+
+    .social-btn {
+        min-height: 44px;
+        padding: 0 12px;
+    }
+
+    .step-card,
+    .tariff-card,
+    .adv-card,
+    .team-card {
+        padding: 22px 16px !important;
+    }
+
+    .step-icon-box,
+    .adv-icon-box {
+        width: 64px !important;
+        height: 64px !important;
+        margin-bottom: 18px !important;
+    }
+
+    .section-title {
+        font-size: 12px !important;
+        letter-spacing: 0.1em !important;
+        line-height: 1.5 !important;
+        margin-top: 28px !important;
+        margin-bottom: 28px !important;
+        padding: 0 12px;
+    }
+
+    .faq-question {
+        padding: 16px 13px !important;
+    }
+
+    .faq-answer-content {
+        padding: 0 13px 16px !important;
+    }
+
+    .contacts-card,
+    .contacts-block {
+        padding: 20px 15px !important;
+    }
+
+    .map-display,
+    .office-map-container iframe {
+        min-height: 240px !important;
+        height: 280px !important;
+    }
+}
+
+/* ---------- УЧЁТ НАСТРОЕК УМЕНЬШЕННОЙ АНИМАЦИИ ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
