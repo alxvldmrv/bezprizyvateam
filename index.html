@@ -1,566 +1,170 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
-  <title>Юридическая помощь призывникам в Екатеринбурге — БезПризыва</title>
-  <meta name="description" content="Юридические консультации призывникам и родителям в Екатеринбурге: вопросы воинского учёта, медицинского освидетельствования, отсрочки и обжалования решений.">
-  <link rel="canonical" href="https://безпризыва.team/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!-- ==================================================
+     БЛОК 1. ШАПКА САЙТА
+     ================================================== -->
+<header class="bp-header">
+  <div class="bp-header__inner">
 
-<header class="site-header">
-  <div class="container_header__container">
-    <a href="/" class="logo" aria-label="БезПризыва — главная">
-      <img src="img/logo.png" alt="БезПризыва" width="52" height="52">
+    <a class="bp-logo" href="#home" aria-label="Юридическая помощь призывникам">
+      <img src="img/logo.png" alt="Юридическая помощь призывникам">
     </a>
 
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Открыть меню">
+    <nav class="bp-nav" id="bp-navigation">
+      <a href="#steps">Этапы работы</a>
+      <a href="#services">Услуги</a>
+      <a href="#advantages">Преимущества</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#knowledge">База знаний</a>
+      <a href="#team">Команда</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+
+    <div class="bp-header__contact">
+      <span>Екатеринбург</span>
+      <a href="tel:+79920927711">+7 (992) 092-77-11</a>
+      <small>Бесплатная консультация</small>
+    </div>
+
+    <button class="bp-menu-toggle"
+            type="button"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="bp-navigation">
       <span></span><span></span><span></span>
     </button>
 
-    <nav class="menu" id="site-menu" aria-label="Основная навигация">
-      <ul class="menu__list">
-        <li><a href="#steps" class="menu__link">Этапы работы</a></li>
-        <li><a href="#tariffs" class="menu__link">Услуги</a></li>
-        <li><a href="#advantages" class="menu__link">Преимущества</a></li>
-        <li><a href="#faq" class="menu__link">Вопросы</a></li>
-        <li><a href="#knowledge" class="menu__link">База знаний</a></li>
-        <li><a href="#team" class="menu__link">Команда</a></li>
-        <li><a href="#contacts" class="menu__link">Контакты</a></li>
-      </ul>
-    </nav>
-
-    <div class="header__contacts">
-      <span class="header__city">Екатеринбург</span>
-      <a href="tel:+79920927711" class="header__phone">+7 (992) 092-77-11</a>
-      <span class="header__sub">Бесплатная консультация</span>
-    </div>
   </div>
 </header>
 
+
+<!-- ==================================================
+     БЛОК 2. ГЛАВНЫЙ ЭКРАН
+     ================================================== -->
 <main>
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="container hero__container">
-      <div class="hero__content">
-        <p class="eyebrow">БезПризыва · Екатеринбург и другие регионы</p>
-        <h1 class="hero__title" id="hero-title">Юридическая помощь призывникам и их родителям</h1>
-        <p class="hero__subtitle">Разбираемся в вопросах воинского учёта, медицинского освидетельствования, отсрочек и обжалования решений. Работаем в рамках действующего законодательства.</p>
+  <section class="bp-hero" id="home">
+    <div class="bp-hero__inner">
 
-        <div class="hero_features">
-          <div class="feature-item"><span class="feature-item_icon" aria-hidden="true">✓</span><span class="feature-item_text">Первичная консультация</span></div>
-          <div class="feature-item"><span class="feature-item_icon" aria-hidden="true">✓</span><span class="feature-item_text">Работа по договору</span></div>
-          <div class="feature-item"><span class="feature-item_icon" aria-hidden="true">✓</span><span class="feature-item_text">Разбор документов и ситуации</span></div>
-          <div class="feature-item"><span class="feature-item_icon" aria-hidden="true">✓</span><span class="feature-item_text">Понятный план дальнейших действий</span></div>
+      <!-- Левая колонка: заголовок и кнопки -->
+      <div class="bp-hero__content">
+
+        <div class="bp-eyebrow">
+          ЕКАТЕРИНБУРГ · КОНСУЛЬТАЦИИ ПО ВСЕЙ РОССИИ
         </div>
 
-        <div class="hero__actions">
-          <button type="button" class="btn hero__btn btn-trigger">Записаться на консультацию</button>
-          <div class="hero__socials" aria-label="Связаться с нами">
-            <a href="https://t.me/" class="social-btn tg" target="_blank" rel="noopener noreferrer" aria-label="Telegram">ТГ</a>
-            <a href="https://vk.com/" class="social-btn vk" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">VK</a>
-            <a href="https://wa.me/79920927711" class="social-btn wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WA</a>
+        <h1>Юридическая помощь призывникам</h1>
+
+        <p class="bp-hero__description">
+          Помогаем призывникам и их родителям разобраться в вопросах
+          воинского учёта, медицинского освидетельствования, отсрочек
+          и обжалования решений. Работаем в рамках действующего
+          законодательства.
+        </p>
+
+        <ul class="bp-hero__benefits">
+          <li>Первичная консультация</li>
+          <li>Разбор документов и ситуации</li>
+          <li>Работа по договору</li>
+          <li>Понятный план дальнейших действий</li>
+        </ul>
+
+        <div class="bp-hero__actions">
+          <a class="bp-button bp-button--primary" href="#contacts">
+            Записаться на консультацию
+          </a>
+
+          <div class="bp-messengers" aria-label="Связаться с нами">
+
+            <a class="bp-messenger bp-messenger--telegram"
+               href="https://t.me/+79920927711"
+               target="_blank" rel="noopener noreferrer">
+              <span class="bp-messenger__icon" aria-hidden="true">➤</span>
+              Телеграм
+            </a>
+
+            <a class="bp-messenger bp-messenger--vk"
+               href="https://vk.com/"
+               target="_blank" rel="noopener noreferrer">
+              <span class="bp-messenger__icon" aria-hidden="true">ВК</span>
+              ВКонтакте
+            </a>
+
+            <a class="bp-messenger bp-messenger--max"
+               href="https://max.ru/"
+               target="_blank" rel="noopener noreferrer">
+              <span class="bp-messenger__icon" aria-hidden="true">М</span>
+              MAX
+            </a>
+
           </div>
         </div>
 
-        <p class="hero__note">Решения об отсрочке, освобождении и призыве принимают уполномоченные государственные органы. Мы консультируем и помогаем защищать права в предусмотренном законом порядке.</p>
+        <p class="bp-hero__disclaimer">
+          Решения о призыве, отсрочке и освобождении принимают
+          уполномоченные государственные органы. Мы консультируем
+          и помогаем защищать права в предусмотренном законом порядке.
+        </p>
+
       </div>
 
-      <div class="hero__right-block">
-        <div class="hero__image">
-          <img src="img/hero-man.png" alt="Иллюстрация к юридической помощи призывникам" width="520" height="520" fetchpriority="high">
+
+      <!-- Правая колонка: фотография и отзывы -->
+      <div class="bp-hero__visual">
+
+        <div class="bp-hero__photo">
+          <img src="img/hero-man.png"
+               alt="Специалист по юридическим вопросам призыва">
         </div>
 
-        <div class="reviews-slider" aria-label="Отзывы клиентов">
-          <div class="reviews-wrapper">
-            <div class="reviews-track">
-              <article class="review-card">
-                <div class="review-card_header">
-                  <span class="review-card_name">Дмитрий В.</span>
-                  <span class="review-card_stars" aria-label="5 из 5">★★★★★</span>
-                </div>
-                <p class="review-card_text">Прошел независимое обследование, подтвердили диагноз. Юристы полностью вели дело.</p>
-              </article>
+        <!-- Карусель отзывов. Добавляйте сюда только реальные отзывы
+             с разрешением на публикацию. -->
+        <div class="bp-reviews" aria-label="Отзывы клиентов">
 
-              <article class="review-card">
-                <div class="review-card_header">
-                  <span class="review-card_name">Марина Н.</span>
-                  <span class="review-card_stars" aria-label="5 из 5">★★★★★</span>
-                </div>
-                <p class="review-card_text">Большое спасибо юристам! Всегда были на связи. Сын зачислен в запас, мы очень довольны.</p>
-              </article>
+          <div class="bp-reviews__track">
 
-              <article class="review-card">
-                <div class="review-card_header">
-                  <span class="review-card_name">Илья П.</span>
-                  <span class="review-card_stars" aria-label="5 из 5">★★★★★</span>
-                </div>
-                <p class="review-card_text">Сопровождали на каждом этапе, составили все заявления в военкомат. Жалею, что не обратился раньше.</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+            <article class="bp-review">
+              <div class="bp-review__top">
+                <strong>Дмитрий В.</strong>
+                <span class="bp-review__stars" aria-label="5 из 5">★★★★★</span>
+              </div>
+              <p>
+                Прошёл независимое обследование, подтвердили диагноз.
+                Юристы полностью вели дело.
+              </p>
+            </article>
 
-  <section class="steps-section" id="steps">
-    <div class="container">
-      <h2 class="section-title"><span>•</span> Как мы помогаем призывникам</h2>
+            <article class="bp-review">
+              <div class="bp-review__top">
+                <strong>Марина Н.</strong>
+                <span class="bp-review__stars" aria-label="5 из 5">★★★★★</span>
+              </div>
+              <p>
+                Большое спасибо юристам! Всегда были на связи.
+                Сын зачислен в запас, мы очень довольны.
+              </p>
+            </article>
 
-      <div class="steps-grid">
-        <article class="step-card">
-          <div class="step-icon-box" aria-hidden="true">01</div>
-          <h3>Первичная консультация</h3>
-          <p>Выслушиваем ситуацию, уточняем сроки, повестки, состояние воинского учёта и вопросы, которые требуют первоочередного внимания.</p>
-        </article>
+            <article class="bp-review">
+              <div class="bp-review__top">
+                <strong>Илья П.</strong>
+                <span class="bp-review__stars" aria-label="5 из 5">★★★★★</span>
+              </div>
+              <p>
+                Сопровождали на каждом этапе, составили все заявления
+                в военкомат. Жалею, что не обратился раньше.
+              </p>
+            </article>
 
-        <article class="step-card">
-          <div class="step-icon-box" aria-hidden="true">02</div>
-          <h3>Анализ документов</h3>
-          <p>Изучаем имеющиеся медицинские выписки, заключения, справки и документы воинского учёта. Объясняем, каких сведений может не хватать.</p>
-        </article>
-
-        <article class="step-card">
-          <div class="step-icon-box" aria-hidden="true">03</div>
-          <h3>План действий</h3>
-          <p>Определяем возможные законные варианты действий, порядок сбора документов и вопросы, которые нужно уточнить у медицинских специалистов или государственных органов.</p>
-        </article>
-
-        <article class="step-card">
-          <div class="step-icon-box" aria-hidden="true">04</div>
-          <h3>Подготовка документов</h3>
-          <p>При необходимости помогаем подготовить заявления, обращения и документы для взаимодействия с уполномоченными органами.</p>
-        </article>
-
-        <article class="step-card">
-          <div class="step-icon-box" aria-hidden="true">05</div>
-          <h3>Юридическое сопровождение</h3>
-          <p>В рамках согласованного договора консультируем по дальнейшим шагам и предусмотренным законом способам защиты прав.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="tariffs-section" id="tariffs">
-    <div class="container">
-      <h2 class="section-title"><span>•</span> Услуги</h2>
-
-      <div class="tariffs-grid">
-        <article class="tariff-card">
-          <div class="tariff-header">
-            <h3>Первичная консультация</h3>
-            <p class="tariff-desc">Для призывников и родителей, которым нужно понять ситуацию и возможные дальнейшие действия.</p>
-          </div>
-          <div class="tariff-features">
-            <div class="feature-item"><span>✓</span><span>Разбор исходной ситуации</span></div>
-            <div class="feature-item"><span>✓</span><span>Ответы на основные вопросы</span></div>
-            <div class="feature-item"><span>✓</span><span>Предварительный план действий</span></div>
-          </div>
-          <div class="tariff-footer">
-            <div class="price-tag">Бесплатно</div>
-            <button type="button" class="tariff-btn tariff-trigger">Записаться</button>
-          </div>
-        </article>
-
-        <article class="tariff-card">
-          <div class="tariff-header">
-            <h3>Юридическое сопровождение</h3>
-            <p class="tariff-desc">Комплексная помощь по вопросам воинского учёта, медицинского освидетельствования и защиты прав.</p>
-          </div>
-          <div class="tariff-features">
-            <div class="feature-item"><span>✓</span><span>Условия фиксируются в договоре</span></div>
-            <div class="feature-item"><span>✓</span><span>Подготовка документов в согласованном объёме</span></div>
-            <div class="feature-item"><span>✓</span><span>Разъяснение порядка действий</span></div>
-          </div>
-          <div class="tariff-footer">
-            <div class="price-tag">от 80 000 ₽</div>
-            <button type="button" class="tariff-btn tariff-trigger">Уточнить условия</button>
-          </div>
-        </article>
-
-        <article class="tariff-card">
-          <div class="tariff-header">
-            <h3>Вопросы отсрочки</h3>
-            <p class="tariff-desc">Разбор возможных оснований для отсрочки и документов, которые могут потребоваться для их подтверждения.</p>
-          </div>
-          <div class="tariff-features">
-            <div class="feature-item"><span>✓</span><span>Проверка представленных документов</span></div>
-            <div class="feature-item"><span>✓</span><span>Разъяснение применимых норм</span></div>
-            <div class="feature-item"><span>✓</span><span>План подготовки подтверждений</span></div>
-          </div>
-          <div class="tariff-footer">
-            <div class="price-tag">Стоимость по запросу</div>
-            <button type="button" class="tariff-btn tariff-trigger">Обсудить ситуацию</button>
-          </div>
-        </article>
-      </div>
-
-      <p class="section-disclaimer">Стоимость, состав и сроки услуг необходимо подтвердить с компанией до публикации. Итоговые решения принимают только уполномоченные органы.</p>
-    </div>
-  </section>
-    <section class="advantages-section" id="advantages">
-    <div class="container">
-      <div class="advantages-badge">● Наш подход</div>
-      <h2 class="section-title">Понятно, последовательно и в рамках закона</h2>
-
-      <div class="advantages-grid">
-        <article class="adv-card">
-          <div class="adv-icon-box" aria-hidden="true">§</div>
-          <h3>Правовая основа</h3>
-          <p>Разъясняем применимые нормы законодательства и возможные законные способы защиты прав.</p>
-        </article>
-
-        <article class="adv-card">
-          <div class="adv-icon-box" aria-hidden="true">✓</div>
-          <h3>Индивидуальный разбор</h3>
-          <p>Учитываем документы и обстоятельства конкретного человека, не обещая одинаковый результат в разных ситуациях.</p>
-        </article>
-
-        <article class="adv-card">
-          <div class="adv-icon-box" aria-hidden="true">↗</div>
-          <h3>Пошаговый план</h3>
-          <p>Объясняем, какие действия можно рассмотреть, какие документы подготовить и что уточнить.</p>
-        </article>
-
-        <article class="adv-card">
-          <div class="adv-icon-box" aria-hidden="true">▤</div>
-          <h3>Прозрачные условия</h3>
-          <p>Объём услуг, стоимость и обязательства должны быть указаны в договоре.</p>
-        </article>
-
-        <article class="adv-card">
-          <div class="adv-icon-box" aria-hidden="true">♡</div>
-          <h3>Поддержка семьи</h3>
-          <p>Разъясняем родителям, как помочь сыну с документами и организацией общения с юристом.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="faq-section" id="faq">
-    <div class="container">
-      <h2 class="section-title"><span>•</span> Частые вопросы</h2>
-
-      <div class="faq-list">
-        <article class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">
-            <span>Можно ли получить военный билет без прохождения срочной службы?</span>
-            <span class="faq-toggle-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              <p>Закон предусматривает разные основания для освобождения от призыва или зачисления в запас. Наличие основания зависит от конкретных обстоятельств и подтверждающих документов. Самостоятельно определить итоговую категорию нельзя: решение принимается в установленном законом порядке уполномоченной призывной комиссией.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">
-            <span>Какие заболевания могут иметь значение при определении категории годности?</span>
-            <span class="faq-toggle-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              <p>Оцениваются заболевания и нарушения функций, предусмотренные действующим Расписанием болезней. Значение имеют не только название диагноза, но и степень выраженности, результаты обследований, медицинская история и критерии соответствующей статьи. Подготовьте выписки и результаты исследований для индивидуального разбора.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">
-            <span>Что делать, если пришла повестка?</span>
-            <span class="faq-toggle-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              <p>Внимательно проверьте сведения о повестке, дату и указанную цель явки. Не игнорируйте документы и не полагайтесь на универсальные советы из интернета: последствия зависят от обстоятельств и действующих правил. Если есть медицинские документы или возможное основание для отсрочки, соберите их и своевременно уточните порядок представления.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">
-            <span>Как проходит медицинское освидетельствование?</span>
-            <span class="faq-toggle-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              <p>Врачи оценивают состояние здоровья с учётом представленных документов и требований Расписания болезней. Заранее подготовьте копии выписок, заключений и результатов обследований. Сообщайте о жалобах точно и последовательно; при необходимости уточните порядок дополнительного обследования.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">
-            <span>Можно ли обжаловать решение призывной комиссии?</span>
-            <span class="faq-toggle-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              <p>Закон предусматривает способы обжалования решений призывной комиссии. Порядок, сроки и последствия подачи жалобы зависят от вида решения и действующих норм. Важно получить копию решения и оперативно проверить применимые сроки у юриста или по официальным источникам.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">
-            <span>Могут ли родители обратиться за консультацией?</span>
-            <span class="faq-toggle-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              <p>Да, родители могут получить общую консультацию и помочь собрать документы. Однако представительство интересов совершеннолетнего сына и доступ к его персональным или медицинским сведениям могут требовать его согласия и надлежащих полномочий. Конкретный порядок лучше уточнить заранее.</p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="knowledge-section" id="knowledge">
-    <div class="container">
-      <h2 class="section-title"><span>•</span> База знаний для призывников и родителей</h2>
-
-      <p class="knowledge-intro">Практические материалы о воинском учёте, медицинских документах и законных способах защиты прав. Информация носит общий характер и не заменяет разбор индивидуальной ситуации.</p>
-
-      <div class="knowledge-list">
-        <article class="faq-item knowledge-item">
-          <button class="faq-question" type="button" aria-expanded="false">
-            <span>Повестка: что проверить и какие документы подготовить</span>
-            <span class="faq-toggle-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              <h3>1. Проверьте сведения</h3>
-              <p>Уточните, кем и с какой целью направлена повестка, дату и место явки, а также способ её вручения. Сохраните уведомления и копии документов.</p>
-
-              <h3>2. Соберите документы по ситуации</h3>
-              <p>Подготовьте паспортные данные, документы воинского учёта, учебные документы и медицинские выписки, если они относятся к вашему вопросу.</p>
-
-              <h3>3. Уточните сроки и порядок действий</h3>
-              <p>Правовые последствия зависят от обстоятельств и действующих правил. Не откладывайте проверку сроков и при необходимости обратитесь за индивидуальной юридической консультацией.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="faq-item knowledge-item">
-          <button class="faq-question" type="button" aria-expanded="false">
-            <span>Медицинские документы: как подготовиться к освидетельствованию</span>
-            <span class="faq-toggle-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              <h3>Соберите медицинскую историю</h3>
-              <p>Полезны выписки из амбулаторной карты и стационара, заключения профильных специалистов, результаты обследований и сведения о назначенном лечении.</p>
-
-              <h3>Проверьте полноту документов</h3>
-              <p>Даты, диагнозы и результаты исследований должны читаться. Храните оригиналы у себя, а для подачи подготовьте копии. Уточните, нужны ли заверение или дополнительные документы.</p>
-
-              <h3>Не ставьте диагноз самостоятельно</h3>
-              <p>Категория годности определяется по установленным критериям и результатам освидетельствования. Медицинские решения должны приниматься квалифицированными специалистами.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="faq-item knowledge-item">
-          <button class="faq-question" type="button" aria-expanded="false">
-            <span>Отсрочка от призыва: с чего начать проверку оснований</span>
-            <span class="faq-toggle-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              <p>Основания и условия отсрочки предусмотрены законодательством и зависят от конкретной ситуации. Сначала определите, к какой категории относится ваш случай: обучение, семейные обстоятельства, здоровье или иное предусмотренное законом основание.</p>
-
-              <p>Затем проверьте актуальные требования, срок действия основания и перечень подтверждающих документов по официальным источникам. Сам факт обучения или наличия обстоятельств не всегда означает автоматическое предоставление отсрочки: необходимо проверить условия и установленную процедуру.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="faq-item knowledge-item">
-          <button class="faq-question" type="button" aria-expanded="false">
-            <span>Руководство для родителей: как поддержать сына</span>
-            <span class="faq-toggle-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              <h3>Помогите организовать документы</h3>
-              <p>Составьте список повесток, решений, медицинских заключений и документов об обучении. Сохраняйте копии и записывайте даты получения и подачи.</p>
-
-              <h3>Обсуждайте действия вместе с сыном</h3>
-              <p>Если сын совершеннолетний, учитывайте его волю и право самостоятельно принимать решения. Для доступа к медицинским сведениям или представительства может понадобиться согласие или оформление полномочий.</p>
-
-              <h3>Не пропускайте сроки</h3>
-              <p>Если получено решение или официальное уведомление, выясните, какие сроки действуют именно в этой ситуации. При необходимости обратитесь к юристу без промедления.</p>
-
-              <h3>Сохраняйте спокойствие</h3>
-              <p>Не полагайтесь на обещания гарантированного результата и советы из непроверенных источников. Просите объяснить правовые основания, риски, стоимость услуг и обязательства по договору.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="faq-item knowledge-item">
-          <button class="faq-question" type="button" aria-expanded="false">
-            <span>Как проверить юридическую услугу перед заключением договора</span>
-            <span class="faq-toggle-icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-content">
-              <p>Перед оплатой проверьте, кто оказывает услугу, что именно входит в договор, какова полная стоимость, как оформляется расторжение и какие обязательства принимает исполнитель. Отдельно уточните, какие действия зависят от государственных органов и не могут гарантироваться частной компанией.</p>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <p class="knowledge-update">Материалы необходимо регулярно проверять и обновлять при изменении законодательства. Для публикации укажите автора-юриста и фактическую дату последней проверки.</p>
-    </div>
-  </section>
-    <section class="team-section" id="team">
-    <div class="container">
-      <h2 class="section-title"><span>•</span> Наша команда</h2>
-
-      <div class="team-grid">
-        <article class="team-card">
-          <div class="team-img-wrapper">
-            <img src="img/team-alexandr.png" alt="Владимиров Александр Владимирович" loading="lazy" width="320" height="320">
-          </div>
-          <h3>Владимиров Александр Владимирович</h3>
-          <div class="team-position">Консультант</div>
-          <p>Помогает разобрать исходную ситуацию и имеющиеся документы.</p>
-        </article>
-
-        <article class="team-card">
-          <div class="team-img-wrapper">
-            <img src="img/team-elizaveta.png" alt="Демидова Елизавета Андреевна" loading="lazy" width="320" height="320">
-          </div>
-          <h3>Демидова Елизавета Андреевна</h3>
-          <div class="team-position">Врач-консультант</div>
-          <p>Консультирует по вопросам медицинских документов в пределах своей компетенции.</p>
-        </article>
-
-        <article class="team-card">
-          <div class="team-img-wrapper">
-            <img src="img/team-natalia.png" alt="Тарасова Наталья Юрьевна" loading="lazy" width="320" height="320">
-          </div>
-          <h3>Тарасова Наталья Юрьевна</h3>
-          <div class="team-position">Юрист</div>
-          <p>Консультирует по правовым вопросам и подготовке обращений.</p>
-        </article>
-
-        <article class="team-card">
-          <div class="team-img-wrapper">
-            <img src="img/team-vladimir.png" alt="Мамонов Владимир Алексеевич" loading="lazy" width="320" height="320">
-          </div>
-          <h3>Мамонов Владимир Алексеевич</h3>
-          <div class="team-position">Помощник юриста</div>
-          <p>Помогает с организационными вопросами и документооборотом.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="footer-section" id="contacts">
-    <div class="footer-container">
-      <div class="contacts-card">
-        <h2 class="section-title"><span>•</span> Контакты</h2>
-
-        <div class="contacts-card-content">
-          <div class="contacts-line">
-            <span class="contacts-bold">Екатеринбург</span>
-            <span class="contacts-gray">ул. 8 Марта, 12А, офис 223</span>
           </div>
 
-          <div class="contacts-line">
-            <a href="tel:+79920927711" class="contacts-link">+7 (992) 092-77-11</a>
-            <a href="tel:+79920071447" class="contacts-link">+7 (992) 007-14-47</a>
+          <div class="bp-reviews__footer">
+            <span class="bp-reviews__dot bp-reviews__dot--active"></span>
+            <span class="bp-reviews__dot"></span>
+            <span class="bp-reviews__dot"></span>
+            <span class="bp-reviews__hint">Отзывы клиентов</span>
           </div>
 
-          <button type="button" class="contacts-phone-btn btn-trigger">Обратиться к нам</button>
-
-          <div class="contacts-social-row">
-            <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="soc-icon tg" aria-label="Telegram">TG</a>
-            <a href="https://vk.com/" target="_blank" rel="noopener noreferrer" class="soc-icon vk" aria-label="ВКонтакте">VK</a>
-          </div>
         </div>
       </div>
 
-      <div class="map-block">
-        <div class="map-header">
-          <h2 class="map-title">Где нас найти</h2>
-          <p class="map-desc">Екатеринбург, ул. 8 Марта, 12А, офис 223.</p>
-        </div>
-
-        <div class="map-display">
-          <img src="img/map-russia.png" alt="Иллюстрация регионов работы компании БезПризыва" loading="lazy" width="700" height="400">
-        </div>
-
-        <a class="map-link" href="https://yandex.ru/maps/?text=%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%208%20%D0%9C%D0%B0%D1%80%D1%82%D0%B0%2C%2012%D0%90" target="_blank" rel="noopener noreferrer">
-          Открыть адрес на Яндекс Картах ↗
-        </a>
-      </div>
     </div>
   </section>
 </main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-requisites">
-      <p>Тел.: <a href="tel:+79920927711">+7 (992) 092-77-11</a> · <a href="tel:+79920071447">+7 (992) 007-14-47</a></p>
-      <p>Екатеринбург, ул. 8 Марта, д. 12А, офис 223</p>
-      <p class="owner-name">ИП Владимиров А. В.</p>
-      <p>ИНН 773213236105 · ОГРН 326965800010363</p>
-    </div>
-
-    <div class="footer-disclaimers">
-      <p><strong>Важно.</strong> Решения о призыве, предоставлении отсрочки, освобождении от призыва и определении категории годности принимаются уполномоченными государственными органами в установленном законом порядке.</p>
-
-      <p>Компания оказывает консультационные и юридические услуги. Она не выдаёт военные билеты и не принимает решения об отсрочке или освобождении от военной службы.</p>
-
-      <p>Информация на сайте носит общий справочный характер, не является индивидуальной юридической консультацией или публичной офертой. Перед принятием решения проверьте актуальные нормы законодательства и обстоятельства конкретного дела.</p>
-
-      <p>Компания не гарантирует выявление оснований для освобождения или отсрочки. Возможные действия, стоимость и объём услуг согласовываются до заключения договора.</p>
-
-      <p>Защита прав осуществляется исключительно законными способами в соответствии с действующим законодательством Российской Федерации.</p>
-    </div>
-  </div>
-</footer>
-
-<div id="modal-callback" class="modal" aria-hidden="true">
-  <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <button type="button" class="modal__close" aria-label="Закрыть окно">&times;</button>
-
-    <h2 class="modal__title" id="modal-title">Запись на консультацию</h2>
-    <p class="modal__subtitle">Оставьте контакты, чтобы обсудить вашу ситуацию.</p>
-
-    <form class="modal__form" action="/wp-admin/admin-post.php" method="post">
-      <input type="hidden" name="action" value="bp_send_consult">
-
-      <div class="form-group">
-        <label class="form-label" for="consult-name">Ваше имя</label>
-        <input id="consult-name" type="text" name="name" class="form-input" autocomplete="name" placeholder="Как к вам обращаться" required>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="consult-phone">Номер телефона</label>
-        <input id="consult-phone" type="tel" name="phone" class="form-input" autocomplete="tel" placeholder="+7 (999) 000-00-00" required>
-      </div>
-
-      <label class="form-consent">
-        <input type="checkbox" name="consent" value="1" required>
-        Согласен на обработку персональных данных в соответствии с
-        <a href="/privacy-policy/" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a>.
-      </label>
-
-      <button type="submit" class="btn modal__btn">Отправить заявку</button>
-    </form>
-  </div>
-</div>
-
-<script src="script.js" defer></script>
-</body>
-</html>
