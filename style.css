@@ -2530,3 +2530,36 @@ video {
         scroll-behavior: auto !important;
     }
 }
+
+/* Значки мессенджеров*/
+.hero__socials .social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.hero__socials .social-btn svg,
+.hero__socials .social-btn img {
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+.hero__socials .social-btn img {
+    object-fit: contain;
+}
+
+.hero__socials .social-btn.tg {
+    background-color: #2CA5E0;
+    color: #fff;
+}
+
+.hero__socials .social-btn.vk {
+    background-color: #0077FF;
+    color: #fff;
+}
+
+.hero__socials .social-btn.mx {
+    background-color: #7360F2;
+}
