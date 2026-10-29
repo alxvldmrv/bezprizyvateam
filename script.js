@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // ==================================================
@@ -13,8 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function slideReviews() {
             currentIndex = (currentIndex + 1) % cards.length;
-
-            // Перемещение на ширину одной карточки
             track.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
 
@@ -29,19 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Останавливаем карусель, пока пользователь читает отзыв
         const slider = track.closest('.reviews-slider');
 
         if (slider) {
             slider.addEventListener('mouseenter', stopSlider);
             slider.addEventListener('mouseleave', startSlider);
-
-            // Поддержка сенсорных экранов
             slider.addEventListener('touchstart', stopSlider, { passive: true });
             slider.addEventListener('touchend', startSlider, { passive: true });
         }
 
-        // Адаптация при изменении размера окна
         window.addEventListener('resize', () => {
             track.style.transform = `translateX(-${currentIndex * 100}%)`;
         });
@@ -82,24 +77,21 @@ document.addEventListener('DOMContentLoaded', () => {
             );
         }
 
-        menuToggle.addEventListener('click', (event) => {
+        menuToggle.addEventListener('click', event => {
             event.preventDefault();
             toggleMenu();
         });
 
-        // Закрываем меню после выбора раздела
         menu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', closeMenu);
         });
 
-        // Закрываем меню клавишей Escape
         document.addEventListener('keydown', event => {
             if (event.key === 'Escape') {
                 closeMenu();
             }
         });
 
-        // При переходе на широкую версию сбрасываем мобильное состояние
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 closeMenu();
@@ -159,14 +151,12 @@ document.addEventListener('DOMContentLoaded', () => {
             closeBtn.addEventListener('click', closeModal);
         }
 
-        // Закрытие нажатием на затемнённый фон
         modal.addEventListener('click', event => {
             if (event.target === modal) {
                 closeModal();
             }
         });
 
-        // Закрытие по Escape
         document.addEventListener('keydown', event => {
             if (
                 event.key === 'Escape' &&
@@ -179,17 +169,95 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ==================================================
-    // 4. ОТПРАВКА ФОРМЫ
-    // Сохраняем отправку через mail.php.
-    // При ошибке не показываем ложное сообщение об успехе.
+    // 4. ТЕЛЕФОН И ОТПРАВКА ФОРМЫ
     // ==================================================
 
     if (modal) {
         const form = modal.querySelector('.modal__form');
+        const phoneInput = form
+            ? form.querySelector('input[name="user_phone"]')
+            : null;
+
+        // Форматирование российского номера
+        function formatPhone(value) {
+            let digits = value.replace(/\D/g, '');
+
+            // Если номер начинается с 7 или 8, убираем код страны
+            if (digits.startsWith('7') || digits.startsWith('8')) {
+                digits = digits.slice(1);
+            }
+
+            digits = digits.slice(0, 10);
+
+            let result = '+7';
+
+            if (digits.length > 0) {
+                result += ' (' + digits.slice(0, 3);
+            }
+
+            if (digits.length >= 3) {
+                result += ')';
+            }
+
+            if (digits.length > 3) {
+                result += ' ' + digits.slice(3, 6);
+            }
+
+            if (digits.length > 6) {
+                result += '-' + digits.slice(6, 8);
+            }
+
+            if (digits.length > 8) {
+                result += '-' + digits.slice(8, 10);
+            }
+
+            return result;
+        }
+
+        if (phoneInput) {
+            phoneInput.setAttribute('type', 'tel');
+            phoneInput.setAttribute('inputmode', 'numeric');
+            phoneInput.setAttribute('autocomplete', 'tel');
+            phoneInput.setAttribute('maxlength', '18');
+            phoneInput.setAttribute('placeholder', '+7 (999) 999-99-99');
+
+            phoneInput.addEventListener('input', () => {
+                phoneInput.value = formatPhone(phoneInput.value);
+                phoneInput.setCustomValidity('');
+            });
+
+            phoneInput.addEventListener('focus', () => {
+                if (!phoneInput.value) {
+                    phoneInput.value = '+7';
+                }
+            });
+
+            phoneInput.addEventListener('blur', () => {
+                if (phoneInput.value === '+7') {
+                    phoneInput.value = '';
+                }
+            });
+        }
 
         if (form) {
             form.addEventListener('submit', async event => {
                 event.preventDefault();
+
+                // Проверяем номер до отправки формы
+                if (phoneInput) {
+                    const digits = phoneInput.value.replace(/\D/g, '');
+
+                    if (digits.length !== 11 || !digits.startsWith('7')) {
+                        phoneInput.setCustomValidity(
+                            'Введите полный номер в формате +7 (999) 999-99-99'
+                        );
+                        phoneInput.reportValidity();
+                        phoneInput.focus();
+                        return;
+                    }
+
+                    phoneInput.setCustomValidity('');
+                }
 
                 const submitBtn = form.querySelector('.modal__btn');
 
@@ -257,7 +325,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ==================================================
     // 5. FAQ И БАЗА ЗНАНИЙ
-    // При открытии одного ответа остальные закрываются.
     // ==================================================
 
     const questions = document.querySelectorAll(
@@ -312,19 +379,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const wasOpen = parentItem.classList.contains('is-open');
 
-            // Закрываем открытые ответы в FAQ и базе знаний
             document.querySelectorAll('.faq-item.is-open').forEach(item => {
                 closeAccordionItem(item);
             });
 
-            // Если выбранный ответ был закрыт, открываем его
             if (!wasOpen) {
                 openAccordionItem(parentItem, question);
             }
         });
     });
 
-    // Пересчитываем высоту открытого ответа при повороте телефона
     window.addEventListener('resize', () => {
         document.querySelectorAll('.faq-item.is-open .faq-answer')
             .forEach(answer => {
