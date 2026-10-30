@@ -178,37 +178,36 @@ document.addEventListener('DOMContentLoaded', () => {
             ? form.querySelector('input[name="user_phone"]')
             : null;
 
-        // Форматирование российского номера
+             // Форматирование российского номера телефона
         function formatPhone(value) {
             let digits = value.replace(/\D/g, '');
 
-            // Если номер начинается с 7 или 8, убираем код страны
-            if (digits.startsWith('7') || digits.startsWith('8')) {
-                digits = digits.slice(1);
+            if (digits.startsWith('8')) {
+                digits = '7' + digits.slice(1);
+            } else if (digits.startsWith('9')) {
+                digits = '7' + digits;
+            } else if (!digits.startsWith('7')) {
+                digits = '7' + digits;
             }
 
-            digits = digits.slice(0, 10);
+            digits = digits.slice(0, 11);
 
             let result = '+7';
 
-            if (digits.length > 0) {
-                result += ' (' + digits.slice(0, 3);
+            if (digits.length > 1) {
+                result += ' (' + digits.slice(1, 4);
             }
 
-            if (digits.length >= 3) {
-                result += ')';
+            if (digits.length >= 4) {
+                result += ') ' + digits.slice(4, 7);
             }
 
-            if (digits.length > 3) {
-                result += ' ' + digits.slice(3, 6);
+            if (digits.length >= 8) {
+                result += '-' + digits.slice(7, 9);
             }
 
-            if (digits.length > 6) {
-                result += '-' + digits.slice(6, 8);
-            }
-
-            if (digits.length > 8) {
-                result += '-' + digits.slice(8, 10);
+            if (digits.length >= 10) {
+                result += '-' + digits.slice(9, 11);
             }
 
             return result;
@@ -221,15 +220,67 @@ document.addEventListener('DOMContentLoaded', () => {
             phoneInput.setAttribute('maxlength', '18');
             phoneInput.setAttribute('placeholder', '+7 (999) 999-99-99');
 
+            function setPhonePosition(count) {
+                let position = 0;
+                let found = 0;
+
+                while (position < phoneInput.value.length && found < count) {
+                    if (/\d/.test(phoneInput.value[position])) found++;
+                    position++;
+                }
+
+                phoneInput.setSelectionRange(position, position);
+            }
+
             phoneInput.addEventListener('input', () => {
+                const caret = phoneInput.selectionStart;
+                const count = phoneInput.value.slice(0, caret)
+                    .replace(/\D/g, '').length;
+
                 phoneInput.value = formatPhone(phoneInput.value);
+                setPhonePosition(Math.min(count, 11));
                 phoneInput.setCustomValidity('');
             });
 
             phoneInput.addEventListener('focus', () => {
                 if (!phoneInput.value) {
                     phoneInput.value = '+7';
+                    phoneInput.setSelectionRange(2, 2);
                 }
+            });
+
+            phoneInput.addEventListener('keydown', (e) => {
+                if (!['Backspace', 'Delete'].includes(e.key)) return;
+
+                e.preventDefault();
+
+                let digits = phoneInput.value.replace(/\D/g, '');
+                const start = phoneInput.selectionStart;
+                const end = phoneInput.selectionEnd;
+
+                let before = phoneInput.value.slice(0, start)
+                    .replace(/\D/g, '').length;
+
+                let after = phoneInput.value.slice(0, end)
+                    .replace(/\D/g, '').length;
+
+                if (start === end) {
+                    if (e.key === 'Backspace') {
+                        if (before <= 1) return;
+                        before--;
+                        after = before + 1;
+                    } else {
+                        if (before >= digits.length) return;
+                        after = before + 1;
+                    }
+                }
+
+                digits = digits.slice(0, Math.max(1, before)) +
+                         digits.slice(Math.max(1, after));
+
+                phoneInput.value = formatPhone(digits);
+                setPhonePosition(Math.max(1, before));
+                phoneInput.setCustomValidity('');
             });
 
             phoneInput.addEventListener('blur', () => {
